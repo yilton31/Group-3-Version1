@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width,
+        initial-scale =1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src = "script1.js" defer></script>
+        <title>Fasting Application</title>
+        <link rel = "stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <!--Home,History and Fasting tips tab section-->
+        <ul class = "tabs">
+            <li data-tab-target="#home" class="active tab">Home</li>
+            <li data-tab-target="#history" class ="tab">History</li>
+            <li data-tab-target="#fastingTips" class = "tab">Fasting Tips</li>
+        </ul>
+
+        <div class = "tab-content">
+            <div id = "home" data-tab-content class = "active">
+                <h1>Home</h1>
+                <p>Fasting Tracker</p>
+                <!--Login and resgistation section-->
+                <div class ="login-page">
+                    <div class = "form">
+                        <form class = "register-form">
+                         <input type = "text" placeholder="User name"/>
+                         <input type = "text" placeholder="password"/>
+                         <input type = "text" placeholder="email address"/>
+                         <button>Create</button>
+                         <p class = "message">Already Registered? <a href="#">Login</a></p>
+             
+                        </form>
+             
+                        <form class = "login-form">
+                        <input type = "text" placeholder="User name"/>
+                        <input type = "password" placeholder="password"/>
+                        <button>login</button>
+                        <p class = "message">Not Registered? <a href="#">Register</a> </p>
+                        </form>
+                    </div>
+                    </div>
+                    <!--Fasting time heading-->
+                    <div class = Heading-center>
+                        <h1>Fasting Time</h1>
+                    </div>
+                    <!--Timer section with start stop and rest commands-->
+                    <div class = "watch">
+                        <div class = "time">
+                            00:00:00
+                        </div>
+             
+                        <div class = "controls">
+                            <button id = "start">Start</button>
+                            <button id = "stop">Stop</button>
+                            <button id = "reset">Reset</button>
+                        </div>
+                    </div>
+                
+            </div>
+            <div id = "history" data-tab-content>
+                <h1>History</h1>
+                <p>previos fasting times</p>
+            </div>
+            <!--Fasting tips tab text section-->
+            <div id = "fastingTips" data-tab-content >
+                <div class = "text-fasting">
+                <h1> Fasting Tips </h1>
+                <h2>Before Fasting</h2>
+                <p> • Eat healthy foods</p>
+                <p> • Drink plenty of water </p>
+                <p> • Do not consume alcohol or caffeine. </p>
+                <p> • Perform moderate exercises.</p>
+                <h2>During Fasting</h2>
+                <p> • Follow doctors instructions on how long to fast. </p>
+                <p> • Stay hydrated.  </p>
+                <p> • Go on walks or perform light exercise. </p>
+                <p> • Stop fasting if you feel unwell. </p>
+                <p> • Drink teas or black coffee. </p>
+                <h2>After Fasting</h2>
+                <p> • Do not overeat.</p>
+                <p> • Eat proteins</p>
+                <p> • Eat carbs </p>
+                <h2>Health Benefits</h2>
+                <p> • Controls blood sugar. </p>
+                <p> • Fights body inflammation. </p>
+                <p> • Improves cardiovascular health.  </p>
+                <p> • Weight loss improves.</p>
+                <p> • Prevents some types of cancer</p>
+                </div>
+
+
+            </div>
+        </div>
+    
+       
+       <!--Popup reminder-->
+       <div class = "popup" id="popup-1">
+           <div class = "overlay">
+               <div class = "close-btn">&times;
+                   <h1>Reminder</h1>
+                   <p>It has been 4 hours since the start of your fast. This is 
+                    a fiendly reminder to drink an 8 ounce glass of water.
+                   </p>
+
+               </div>
+           </div> 
+       </div>
+
+       <button onclick="togglePop">Show Popup </button>
+
+       <!--display button with current date and time-->
+       <button type = "button" onclick = "document.getElementById('display').innerHTML = Date()">
+       <button id = "date-button">
+           Date and Time
+       </button>
+       <p id = "display">
+       
+       </p>
+       <!--java script commands for login and timer-->
+       <script src = "https://code.jquery.com/jquery-3.6.0.min.js">
+    
+       </script>
+
+       <script src = "main.js">
+
+       </script>
+
+       <script>
+       $('.message a').click(function() {
+       $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+       });
+
+       </script>
+
+
+
+
+
+    </body>
+</html>
